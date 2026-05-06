@@ -1,0 +1,161 @@
+Language: Cpp
+Standard: Latest
+
+# -----------------------------------------------------------------------------
+# 缩进与排版 (Indentation)
+# -----------------------------------------------------------------------------
+UseTab: ForContinuationAndIndentation
+TabWidth: 4
+IndentWidth: 4
+ContinuationIndentWidth: 4
+
+# 命名空间全缩进，增强层次感
+NamespaceIndentation: All
+
+# 访问修饰符 (public/private) 靠左对齐，不额外缩进
+IndentAccessModifiers: false
+AccessModifierOffset: -4
+
+IndentCaseLabels: true
+IndentGotoLabels: false
+IndentPPDirectives: BeforeHash
+
+# -----------------------------------------------------------------------------
+# 水平对齐 (Alignment) - 增强表格化视觉
+# -----------------------------------------------------------------------------
+# 连续赋值对齐 (如 a = 1; bb = 2;)
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+
+# 连续声明对齐 (变量名对齐)
+AlignConsecutiveDeclarations:
+  Enabled: true
+
+# 宏定义对齐
+AlignConsecutiveMacros: true
+
+# 括号、操作数与注释对齐
+AlignAfterOpenBracket: Align
+AlignOperands: AlignAfterOperator
+AlignTrailingComments: true
+AlignEscapedNewlines: Left
+
+# -----------------------------------------------------------------------------
+# 大括号换行策略 (Brace Wrapping - Allman Style)
+# -----------------------------------------------------------------------------
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterCaseLabel: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterUnion: true
+  AfterExternBlock: true
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeWhile: true
+  BeforeLambdaBody: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+
+# -----------------------------------------------------------------------------
+# 换行与折行 (Line Breaking)
+# -----------------------------------------------------------------------------
+ColumnLimit: 120
+
+# 表达式换行
+BreakBeforeBinaryOperators: All
+BreakBeforeTernaryOperators: true
+BreakBeforeChainedMethodCalls: true
+
+# 模板与继承列表换行
+BreakTemplateDeclarations: Yes
+BreakInheritanceList: BeforeComma
+BreakConstructorInitializers: BeforeComma
+
+# 阻止返回类型被轻易踢到下一行
+PenaltyReturnTypeOnItsOwnLine: 999
+
+# -----------------------------------------------------------------------------
+# 参数布局 (Parameters & Arguments) - 禁止 BinPacking
+# -----------------------------------------------------------------------------
+# 强制每个参数独占一行，除非全部能放在一行内
+BinPackArguments: false
+BinPackParameters: false
+
+# 初始化列表竖排
+PackConstructorInitializers: NextLine
+AllowAllConstructorInitializersOnNextLine: false
+
+# -----------------------------------------------------------------------------
+# 简短语句约束 (Short Block Constraints) - 强规整度
+# -----------------------------------------------------------------------------
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortLambdasOnASingleLine: None
+
+# -----------------------------------------------------------------------------
+# 空格规则 (Whitespace)
+# -----------------------------------------------------------------------------
+SpaceBeforeParens: ControlStatements
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeRangeBasedForLoopColon: true
+
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: true
+SpaceAfterLogicalNot: false
+
+SpacesBeforeTrailingComments: 1
+
+# 内部不留白，保持紧凑
+SpacesInAngles: false
+SpacesInContainerLiterals: true
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: false
+SpacesInParentheses: true
+SpacesInSquareBrackets: true
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+
+# -----------------------------------------------------------------------------
+# 指针/限定符顺序 (Pointers & Qualifiers)
+# -----------------------------------------------------------------------------
+PointerAlignment: Left
+ReferenceAlignment: Left
+DerivePointerAlignment: false
+
+# 强制限定符标准化: inline static constexpr const T
+QualifierAlignment: Custom
+QualifierOrder: ['inline', 'static', 'constexpr', 'const', 'type']
+
+# -----------------------------------------------------------------------------
+# 结构控制与清理 (Cleanup & Specifics)
+# -----------------------------------------------------------------------------
+# 强制在定义块（函数/类）之间增加空行
+SeparateDefinitionBlocks: Always
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+
+# 自动修复命名空间末尾注释
+FixNamespaceComments: true
+CompactNamespaces: false
+
+# 其他
+Cpp11BracedListStyle: true
+ReflowComments: false
+SortUsingDeclarations: true
+InsertBraces: true # 强制为所有 if/while 添加大括号
+
+CommentPragmas: '^ IWYU pragma:'
+ForEachMacros: [foreach, Q_FOREACH, BOOST_FOREACH]
