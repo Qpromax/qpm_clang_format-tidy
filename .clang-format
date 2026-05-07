@@ -5,8 +5,8 @@ Standard: Latest
 # Indentation（缩进策略）
 # =============================================================================
 
-UseTab: ForContinuationAndIndentation
-# 使用 tab 进行续行与缩进（混合策略：非纯 space）
+UseTab: Never
+# 使用空格进行续行与缩进
 
 TabWidth: 4
 IndentWidth: 4
@@ -14,22 +14,22 @@ ContinuationIndentWidth: 4
 # tab / 空格统一等价宽度为 4
 
 NamespaceIndentation: All
-# namespace 内部完全缩进（提升层级可读性，但增加视觉深度）
+# namespace 内部完全缩进
 
 IndentAccessModifiers: false
 # public/private/protected 不额外缩进（保持类成员对齐）
 
 AccessModifierOffset: -4
-# 访问控制符向左偏移 4（通常用于贴左风格）
+# 访问控制符向左偏移 4
 
 IndentCaseLabels: true
-# case 标签缩进（switch 内结构更清晰）
+# case 标签缩进
 
 IndentGotoLabels: false
 # goto label 不缩进（保持列对齐）
 
 IndentPPDirectives: BeforeHash
-# 预处理指令 # 之前缩进（较少见，强调层级归属）
+# 预处理指令 # 之前缩进
 
 # =============================================================================
 # Alignment（对齐策略）
@@ -88,7 +88,7 @@ BraceWrapping:
 # catch / else / while 另起一行（典型 Allman 强风格）
 
   BeforeLambdaBody: true
-# lambda 花括号独立换行（增加可读性但更冗长）
+# lambda 花括号独立换行
 
   IndentBraces: false
 # brace 本身不额外缩进（保持结构层级稳定）
@@ -107,7 +107,7 @@ BraceWrapping:
 ColumnLimit: 120
 # 最大行宽 120
 
-BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeBinaryOperators: All
 # 二元运算符换行时非赋值运算符优先前置
 
 BreakBeforeTernaryOperators: true
